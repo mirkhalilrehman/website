@@ -13,7 +13,11 @@ body {
     color: black;
     padding: 15px 30px;
     height: 40px;
-    z-index: 2; 
+    z-index: 2;
+}
+
+.menu-toggle {
+    display: none;
 }
 
 .logo {
@@ -44,6 +48,10 @@ body {
     vertical-align: middle;
 }
 
+/* Media query for smaller screens (max-width: 600px) */
+@media screen and (max-width: 600px) {
+  
+}
 .main {
     position: relative;
 }
@@ -90,26 +98,33 @@ body {
 }
 
 .products {
-    margin-top: 20px; /* Add a margin to separate it from the .main section */
+    margin-top: 20px;
+    /* Add a margin to separate it from the .main section */
     padding: 20px;
-   text-align: center;
+    text-align: center;
 }
-.items{
+
+.items {
     display: flex;
     text-align: center;
-    align-items:space-between;
+    align-items: space-between;
     justify-content: space-around;
-    
+
 }
 
 .item::after {
     content: "";
     display: block;
-    width: 100%; /* Full width of the container */
-    height: 1px; /* Height of the line */
-    background-color: #ddd; /* Light color for the line */
-    margin-top: 10px; /* Adjust as needed to separate the line from items */
+    width: 100%;
+    /* Full width of the container */
+    height: 1px;
+    /* Height of the line */
+    background-color: #ddd;
+    /* Light color for the line */
+    margin-top: 10px;
+    /* Adjust as needed to separate the line from items */
 }
+
 .products button {
     margin-top: 50px;
     background-color: #F35C22;
@@ -123,34 +138,56 @@ body {
 .products button:hover {
     background-color: rgb(228, 114, 73);
 }
-.blog,.blog2{
+
+.blog {
     margin-top: 100px;
     display: flex;
 }
-.content{
-  margin: 70px 120px;
-  margin-top: 100px;
+
+.blog2 {
+    margin-top: 100px;
+    display: flex;
+    flex: 1;
 }
-.content2{
+
+.blog img,
+.blog2 img {
+    width: 600px;
+    height: 500px
+}
+
+.content {
+    margin: 70px 120px;
+    margin-top: 100px;
+}
+
+.content2 {
     margin: 120px;
     margin-top: 100px;
 }
 
+.stp {
+    padding: 0px 200px;
+}
+
 .reviews h3,
 .content2 h3,
-.content h3{
+.content h3 {
     font-weight: lighter;
     font-size: 28px;
     line-height: 38px;
     /* font-family: "400 normal"; */
 }
-.content p,.content2 p{
- color: rgb(58, 56, 56);
- line-height: 28px;
- font-weight: 100;
+
+.content p,
+.content2 p {
+    color: rgb(58, 56, 56);
+    line-height: 28px;
+    font-weight: 100;
 }
+
 .content2 button,
-.content button{
+.content button {
     margin-top: 30px;
     background-color: inherit;
     padding: 15px 80px;
@@ -162,90 +199,106 @@ body {
     border: 1px solid black;
 }
 
-.content button:hover{
+.content button:hover {
     color: black;
 }
-.content2 button:hover{
+
+.content2 button:hover {
     color: black;
 }
-.reviews{
+
+.reviews {
     height: 600px;
     width: 100vw;
-    
+
     text-align: center;
     align-items: center;
     padding-top: 100px;
-    
-background-color: rgb(245, 245, 245);
+
+    background-color: rgb(245, 245, 245);
 }
 
 
 
-.one,.two{
+.one,
+.two {
     width: 500px;
     height: 250px;
     background-color: rgb(255, 255, 255)
 }
-.box{
+
+.box {
     padding-top: 50px;
     display: flex;
     justify-content: space-around;
 }
-.one,.two{
+
+.one,
+.two {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px; /* Adjust the padding as needed */
-    margin: 0; 
+    padding: 15px;
+    /* Adjust the padding as needed */
+    margin: 0;
     text-align: center;
 
 }
 
-.one img,.two img{
+.one img,
+.two img {
     margin-top: 30px;
     border-radius: 50%;
 }
-.one h4,.two h4{
+
+.one h4,
+.two h4 {
     color: #F35C22;
 }
-.news{
+
+.news {
     width: 100vw;
     height: 400px;
     background-color: #F35C22;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px; /* Adjust the padding as needed */
-    margin: 0; 
+    padding: 15px;
+    /* Adjust the padding as needed */
+    margin: 0;
     text-align: center;
     color: white;
     justify-content: center;
 
 }
-.news h1{
+
+.news h1 {
     font-size: 2.2em;
 
 }
 
-.news h6{
+.news h6 {
     font-size: 1.0em;
     font-weight: 200;
 }
+
 /* .news form{
     display: flex;
     flex-direction: column;
 } */
-.news  input{
-  padding: 20px 10px;
-  width: 450px;
-  border: none;
-  text-align: left;
+.news input {
+    padding: 20px 10px;
+    width: 450px;
+    border: none;
+    text-align: left;
 
 }
-.news input::placeholder{
+
+.news input::placeholder {
     color: rgb(187, 171, 148);
 }
-.news button{
+
+.news button {
     margin-top: 30px;
     background-color: inherit;
     padding: 15px 80px;
@@ -256,11 +309,13 @@ background-color: rgb(245, 245, 245);
     transition: background-color 0.3s;
     border: 1px solid rgb(255, 254, 254);
 }
-.news button:hover{
+
+.news button:hover {
     background-color: black;
     border: 1px solid black;
 }
-.footer{
+
+.footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -269,31 +324,38 @@ background-color: rgb(245, 245, 245);
     padding: 15px 30px;
     height: 50px;
     /* z-index: 2;  */
-    
+
 }
-.logoo{
+
+.logoo {
     font-size: 1.5em;
 }
-.footer ul{
+
+.footer ul {
     display: flex;
-   
+
 }
-.footer li{
+
+.footer li {
     list-style: none;
-  
+
 }
+
 .footer li:first-child {
     margin-right: 15px;
 }
-.footer li a{
-   
+
+.footer li a {
+
     margin: 0px 10px;
 
 }
-.footer img{
-     width: 20px;
+
+.footer img {
+    width: 20px;
 }
-.final{
+
+.final {
     background-color: black;
     color: white;
     text-align: center;
@@ -303,4 +365,283 @@ background-color: rgb(245, 245, 245);
     justify-content: center;
     font-weight: lighter;
     font-size: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    .background {
+        width: 100vw;
+        height: 600px;
+        box-sizing: border-box;
+        filter: brightness(85%);
+    }
+
+    .text {
+        position: absolute;
+        left: 50%;
+        top: 55%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fff;
+        z-index: 1;
+    }
+
+    .text h1 {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .text p {
+        font-size: 0.9em;
+        margin-bottom: 20px;
+    }
+
+    .text button {
+        background-color: #F35C22;
+        border: none;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+    .text button:hover {
+        background-color: rgb(228, 114, 73);
+    }
+
+    .products {
+        margin-top: 20px;
+        /* Add a margin to separate it from the .main section */
+        padding: 20px;
+        text-align: center;
+    }
+
+    .items {
+
+        flex-direction: column;
+    }
+
+    .item::after {
+        content: "";
+        display: block;
+        width: 100%;
+        /* Full width of the container */
+        height: 1px;
+        /* Height of the line */
+        background-color: #ddd;
+        /* Light color for the line */
+        margin-top: 10px;
+        margin-bottom: 50px;
+        /* Adjust as needed to separate the line from items */
+    }
+
+    .products button {
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .blog,
+    .blog2 {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog img {
+        height: 300px;
+    }
+
+    .blog2 img {
+        height: 300px;
+        order: -1;
+    }
+
+    .content {
+        text-align: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+
+    .content2 {
+        text-align: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+
+    }
+
+    .stp {
+        padding: 10px 0px;
+        margin: 0px 20px;
+
+    }
+
+
+    .reviews h3,
+    .content2 h3,
+    .content h3 {
+        font-weight: 50;
+        font-size: 28px;
+        line-height: 38px;
+        /* font-family: "400 normal"; */
+    }
+
+    .content p,
+    .content2 p {
+        color: rgb(58, 56, 56);
+        line-height: 28px;
+        font-weight: 100;
+
+    }
+
+    .content2 button,
+    .content button {
+        margin-top: 30px;
+        background-color: inherit;
+        padding: 15px 80px;
+        border: none;
+        color: rgb(63, 51, 51);
+        font-weight: 500;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        border: 1px solid black;
+    }
+
+
+
+    .reviews {
+        height: 900px;
+        width: 100vw;
+
+        padding-top: 20px;
+
+
+    }
+
+    .one,
+    .two {
+        width: 100vw;
+        height: 300px;
+        box-sizing: border-box;
+        margin-top: 40px;
+
+    }
+
+    .box {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .news {
+        width: 100vw;
+        margin-top: 40px;
+
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+
+    }
+
+    .news h1 {
+        font-size: 1.5em;
+
+    }
+
+    .news h6 {
+        font-size: 1.0em;
+        font-weight: 150;
+    }
+
+
+    .news input {
+        padding: 20px 10px;
+        width: 250px;
+        border: none;
+        text-align: left;
+
+    }
+
+
+
+    .news button {
+
+        padding: 15px 50px;
+
+    }
+
+  
+
+    .footer{
+        width: 100vw;
+        display: flex;
+       
+    }
+
+    .footer li:first-child {
+        display: none;
+    }
+    .footer li:not(:first-child) {
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    
+.footer .menu{
+    display: none;
+}
+   
+    .final {
+        background-color: black;
+        color: white;
+        text-align: center;
+        height: 50px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        font-weight: lighter;
+        font-size: 1em;
+    }
+
+
+    .blog img,
+    .blog2 img {
+        width: 100vw;
+        box-sizing: border-box;
+    }
+
+    .nav {
+
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 15px;
+        height: auto;
+    }
+
+    .menu-toggle {
+        display: block;
+        order: -1; /* Move the menu toggle to the top */
+        cursor: pointer;
+        background-color: #F35C22;
+        border: none;
+        color: white;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+    }
+
+    .menu.show ul {
+        display: flex;
+    }
+
+    .menu li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
 }

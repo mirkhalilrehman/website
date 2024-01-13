@@ -8,22 +8,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div class="nav">
-        <div class="logo">
-            SSURFERS
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#"><img src="cart.jpg" width="50" height="23px" alt=""></a></li>
-            </ul>
-        </div>
+<body><div class="nav">
+    <div class="logo">
+      SSURFERS
     </div>
+    <div class="menu">
+      <button id="menu-toggle" class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+  
+      <ul class="menuu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#"><img src="cart.jpg" width="50" height="23px" alt=""></a></li>
+      </ul>
+    </div>
+  </div>
+
     <div class="main">
         <img src="slider_01.jpg" alt="" class="background">
         <div class="text">
@@ -66,7 +68,7 @@
     </div>
     <div class="blog">
 
-        <img src="blog_main.webp" alt="" width="600" height="500">
+        <img src="blog_main.webp" alt="" >
         <div class="content">
             <h3>Learn more about surfing</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et mauris lacinia, egestas velit eu,
@@ -87,11 +89,11 @@
                 luctus. </p>
             <button>READ MORE</button>
         </div>
-        <img src="slider_01.jpg" alt="" width="600" height="500">
+        <img src="slider_01.jpg" alt="" >
     </div>
     <div class="reviews">
         <h3>Customer reviews</h3>
-        <p style="padding: 0px 300px;">Nunc condimentum feugiat tellus sit amet lacinia. Pellentesque laoreet metus sed
+        <p class="stp">Nunc condimentum feugiat tellus sit amet lacinia. Pellentesque laoreet metus sed
             eros molestie, sit amet
             aliquet sapien accumsan. Mauris ac diam posuere</p>
         <div class="box">
@@ -148,6 +150,14 @@
     <div class="final">
         <p>© 2024 Mir Khalil ur Rehman. All rights reserved.</p>
     </div>
+    <script>
+        function toggleMenu() {
+          const menu = document.querySelector('.menu');
+          menu.classList.toggle('show');
+        }
+      </script>
+      
+    
 </body>
 
 </html>
